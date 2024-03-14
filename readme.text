@@ -1,0 +1,37 @@
+1. Prepare Symfony Environment: Make sure you have Symfony installed and configured properly in your development environment.
+
+
+Configuration
+    Configure database connection in .env file
+
+Dependencies
+    Composer install
+
+Database
+    In root folder(Name : instruct.sql )
+
+2. Query Services Command
+
+    To query services for a specific country, you can use the following command:
+
+    php bin/console app:query-services <country_code>
+
+        Example : php bin/console app:query-services GB
+
+3. Summary Command        
+
+    To generate a summary report based on the queried services, you can use the following command:
+
+     php bin/console app:summary
+
+     This command generates a summary report based on the services queried using the app:query-services command. It provides an overview of the services available across all queried countries.
+
+4. PHP Unit test Commands
+
+    To test query services function you can use the following command:
+
+    php bin/phpunit tests/QueryServicesCommandTest.php
+
+    To test Summary command function you can use the following command:
+
+    php bin/phpunit tests/SummaryCommandTest.php
